@@ -1,10 +1,3 @@
-//
-//  Message.swift
-//  fbMessenger
-//
-//  Created by Brian Voong on 4/4/16.
-//  Copyright © 2016 letsbuildthatapp. All rights reserved.
-//
 
 import Foundation
 import CoreData

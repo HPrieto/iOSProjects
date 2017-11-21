@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  youtube
-//
-//  Created by Brian Voong on 6/1/16.
-//  Copyright © 2016 letsbuildthatapp. All rights reserved.
-//
 
 import UIKit
 
@@ -15,29 +8,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
+
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.makeKeyAndVisible()
-        
+
         let layout = UICollectionViewFlowLayout()
 //        layout.scrollDirection = .Horizontal
         window?.rootViewController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout))
-        
+
         UINavigationBar.appearance().barTintColor = UIColor.rgb(230, green: 32, blue: 31)
-        
+
         // get rid of black bar underneath navbar
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)
-        
+
         application.statusBarStyle = .LightContent
-        
+
         let statusBarBackgroundView = UIView()
         statusBarBackgroundView.backgroundColor = UIColor.rgb(194, green: 31, blue: 31)
-        
+
         window?.addSubview(statusBarBackgroundView)
         window?.addConstraintsWithFormat("H:|[v0]|", views: statusBarBackgroundView)
         window?.addConstraintsWithFormat("V:|[v0(20)]", views: statusBarBackgroundView)
-        
+
         return true
     }
 
@@ -65,4 +58,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
